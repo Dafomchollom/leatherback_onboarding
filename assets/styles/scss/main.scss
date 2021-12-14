@@ -1,0 +1,69 @@
+// @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: 'NoeDisplay';
+  src: local('NoeDisplay'),
+    url(~assets/fonts/NoeDisplay-Bold.ttf) format('truetype');
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span {
+  //   background: red !important;
+  font-family: 'DM Sans', sans-serif;
+}
+.ant-form-item-label,
+.ant-form-item-required {
+  color: #878ea1 !important;
+  font-family: 'DM Sans' !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 21px;
+  padding-bottom: 10px !important;
+  width: 100%;
+}
+.ant-form-explain {
+  text-align: left;
+  color: red;
+}
+.ant-input {
+  border-radius: 12px !important;
+  padding: 18px 25px !important;
+  width: 100%;
+  height: auto !important;
+  border: 1px solid #e0e0e0;
+}
+.ant-select-selection {
+  border-radius: 12px !important;
+  padding: 15px 15px !important;
+  width: 100%;
+  height: auto !important;
+  border: 1px solid #e0e0e0;
+}
+.ant-input:disabled {
+  background-color: #f8f8f8 !important;
+  opacity: 1;
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+.ant-form-item {
+  margin-bottom: 10px;
+}
+.ant-select-selection {
+  display: flex;
+  justify-content: space-between;
+  //   border: 1px solid #e0e0e0;
+}
+.ant-form-explain {
+  margin-top: 10px !important;
+  //   color: red;
+  //   border: 1px solid red;
+}
