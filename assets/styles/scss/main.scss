@@ -5,6 +5,34 @@
   src: local('NoeDisplay'),
     url(~assets/fonts/NoeDisplay-Bold.ttf) format('truetype');
 }
+:root {
+  --matte: #0b1320;
+  --light-matte: rgb(11, 19, 32, 0.5);
+  --blue-matte: #2f2f6c;
+  --light-blue-matte: #4d587b;
+  --danger: #f03d3e;
+  --coral: #ff5663;
+  --brand-xlight-orange: #fffaf2;
+  --brand-blue: #377ff7;
+  --brand-fade-white: #f6f8fa;
+  --brand-deep-blue: #001333;
+  --brand-dark-blue: #000080;
+  --brand-green: #27ae60;
+  --brand-light-green: rgba(39, 174, 96, 0.06);
+  --brand-yellow: rgb(230, 192, 60);
+  --brand-orange: #ffd491;
+  --brand-xlight-blue: #f9fbff;
+  --brand-2xlight-blue: #f8f9ff;
+  --brand-light-blue: #e3edff;
+  --brand-light-blue2: #c3e6fd;
+  --brand-lighter-blue: #eaf2ff;
+  --brand-lighter-blue2: #eaf0fd;
+  --brand-grey: #f0f0f0;
+  --brand-light-gray: #eef3f9;
+  --brand-secondary: #7d92a7;
+  --brand-light-danger: #ffe8e8;
+  --brand-font: 'DM Sans', sans-serif;
+}
 html,
 body,
 h1,
@@ -27,7 +55,7 @@ span {
   font-weight: 400 !important;
   font-size: 16px;
   line-height: 21px;
-  padding-bottom: 10px !important;
+  padding-bottom: 0px !important;
   width: 100%;
 }
 .ant-form-explain {
@@ -35,15 +63,15 @@ span {
   color: red;
 }
 .ant-input {
-  border-radius: 12px !important;
-  padding: 18px 25px !important;
+  border-radius: 7px !important;
+  padding: 17px 20px !important;
   width: 100%;
   height: auto !important;
   border: 1px solid #e0e0e0;
 }
 .ant-select-selection {
-  border-radius: 12px !important;
-  padding: 15px 15px !important;
+  border-radius: 7px !important;
+  padding: 10px 7px !important;
   width: 100%;
   height: auto !important;
   border: 1px solid #e0e0e0;
@@ -55,7 +83,7 @@ span {
   color: rgba(0, 0, 0, 0.85) !important;
 }
 .ant-form-item {
-  margin-bottom: 10px;
+  margin-bottom: 5px !important;
 }
 .ant-select-selection {
   display: flex;

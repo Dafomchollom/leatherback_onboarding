@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{ 'card-lg': width === 'lg', 'card-md': width === 'md' }"
-    class="md:container md:mx-auto bg-white rounded-lg p-10 shadow-md"
+    class="md:container md:mx-auto bg-white rounded-lg p-10 shadow-md animated fadeInRight"
   >
     <div class="card-wrapper__headerWrapper">
       <h3 class="card-wrapper__headerWrapper_title">{{ title }}</h3>

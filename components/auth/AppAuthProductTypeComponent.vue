@@ -2,8 +2,8 @@
   <div
     class="md:container md:mx-auto bg-white rounded-lg shadow-md productType_wrapper"
   >
-    <div class="productType_wrapper__header">
-      <button><img src="@/assets/images/ic_Dropdown.svg" alt="" /></button>
+    <div class="productType_wrapper__header text-center">
+      <!-- <button><img src="@/assets/images/ic_Dropdown.svg" alt="" /></button> -->
       <h2 class="productType_wrapper__header__title">
         Select Which of our Products you’re interested in
       </h2>
@@ -12,7 +12,12 @@
       </p>
     </div>
     <div class="productType_wrapper__body">
-      <div class="productType_wrapper__body__card shadow-md leatherback">
+      <div
+        class="productType_wrapper__body__card shadow-md leatherback"
+        :class="{
+          productType_wrapper__body__cardActive: productType === 'leatherback',
+        }"
+      >
         <label>
           <input
             v-model="productType"
@@ -35,8 +40,13 @@
         </label>
         <img src="@/assets/images/producttypeimage.svg" alt="" />
       </div>
-      <div class="productType_wrapper__body__card payr">
-        <label class="label">
+      <div
+        class="productType_wrapper__body__card payr"
+        :class="{
+          productType_wrapper__body__cardActive: productType === 'payr',
+        }"
+      >
+        <label>
           <input
             v-model="productType"
             type="radio"
@@ -99,7 +109,7 @@ export default Vue.extend({
   width: 100%;
   height: auto;
   padding: 20px 40px;
-  max-width: 950px;
+  max-width: 850px;
   .productType_wrapper__header {
     button img {
       widows: 48px;
@@ -128,18 +138,18 @@ export default Vue.extend({
       border-radius: 30px;
       overflow: hidden;
       transition: all 0.4s !important;
+      border: 2px solid transparent;
       label {
         width: 100%;
-        height: 393px;
+        height: 293px;
       }
-
       .card-input-element {
         display: none;
       }
 
       .card-input {
         margin: 10px;
-        height: 393px;
+        height: 293px;
         position: relative;
         z-index: 1;
         padding: 30px 25px;
@@ -203,6 +213,9 @@ export default Vue.extend({
         right: 0px;
       }
     }
+    .productType_wrapper__body__cardActive {
+      border: 2px solid var(--brand-blue);
+    }
     .leatherback {
       background: #d9e2fd;
     }
@@ -219,7 +232,7 @@ export default Vue.extend({
     button {
       background: #3365ff;
       border-radius: 24px;
-      padding: 25px 30px;
+      padding: 20px 25px;
       width: 300px;
       font-family: 'DM Sans';
       font-style: normal;
@@ -233,7 +246,7 @@ export default Vue.extend({
       transition: all 0.5s;
     }
     button:hover {
-      padding: 25px;
+      padding: 20px;
     }
   }
 }

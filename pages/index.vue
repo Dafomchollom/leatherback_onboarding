@@ -13,7 +13,7 @@ export default Vue.extend({
   },
   methods: {
     submitHandler() {
-      this.$router.push('/auth/verify')
+      this.$router.push('/individual/')
     },
   },
 })

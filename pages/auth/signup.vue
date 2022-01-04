@@ -25,12 +25,23 @@
       </div>
       <ValidationObserver ref="verifyObserver">
         <AppInputComponent
+          v-if="isEmail"
           label="Email"
           placeholder="Enter Email Address here"
           colon
           required
           name="Email Token"
           type="email"
+          :rules="{ required: true }"
+        />
+        <AppInputComponent
+          v-if="!isEmail"
+          label="Phone Number"
+          placeholder="Enter Phone Number here"
+          colon
+          required
+          name="Phone Number"
+          type="number"
           :rules="{ required: true }"
         />
         <AppSelectComponent
@@ -60,6 +71,24 @@
           type="password"
           :rules="{ required: true }"
         />
+        <div class="flex align-center pt-3 pb-3">
+          <base-checkbox
+            id="agreement"
+            :checked="isTermsAgreed"
+            class="mr-2"
+            @change="(value) => (isTermsAgreed = value)"
+          />
+          <span class="text-base"
+            >I agree to Leatherback’s
+            <nuxt-link to="/terms-conditions" class="t-cursor-pointer"
+              >Terms & Conditions</nuxt-link
+            >
+            and
+            <nuxt-link to="/privacy-policy" class="t-cursor-pointer"
+              >Privacy Policy</nuxt-link
+            ></span
+          >
+        </div>
       </ValidationObserver>
     </template>
   </AppCardComponent>
@@ -71,22 +100,26 @@ import { ValidationObserver } from 'vee-validate'
 import AppInputComponent from '@/components/inputcomponents/AppInputComponent.vue'
 import AppSelectComponent from '@/components/inputcomponents/AppSelectComponent.vue'
 import AppCardComponent from '@/components/uicomponents/AppCardComponent.vue'
+import BaseCheckbox from '@/components/inputcomponents/BaseCheckbox.vue'
 export default Vue.extend({
   components: {
     AppCardComponent,
     ValidationObserver,
     AppInputComponent,
     AppSelectComponent,
+    BaseCheckbox,
   },
   data() {
     return {
       isEmail: true,
+      isTermsAgreed: false,
     }
   },
   methods: {
     async submithandler() {
       const valid = await this.$refs.verifyObserver?.validate()
-      console.log(valid, ':::: valid:::: ')
+      // console.log(valid, ':::: valid:::: ')
+      this.$router.push('/')
     },
   },
 })
